@@ -1,8 +1,13 @@
-from setuptools import setup
+from setuptools import setup, find_packages
+
+with open("README.md", "r", encoding="utf-8") as fh:
+    long_description = fh.read()
 
 setup(name='cpf_cnpj_validate',
-      version='1.6.0',
+      version='1.0',
       description='Python module for brazilian register numbers for persons (CPF) and companies (CNPJ) and mask generator to string or int CPF/CNPJ.',
+      long_description=long_description,
+      long_description_content_type="text/markdown",
       classifiers=[
           'Development Status :: 5 - Production/Stable',
           'License :: OSI Approved :: MIT License',
@@ -21,7 +26,7 @@ setup(name='cpf_cnpj_validate',
       author='André França',
       author_email='rsp.assistencia@gmail.com',
       license='MIT',
-      packages=['pycpfcnpj'],
+      packages=find_packages(),
           test_suite='nose.collector',
           tests_require=['nose'],
       zip_safe=False)

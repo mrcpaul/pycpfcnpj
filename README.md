@@ -24,7 +24,7 @@ Python module for brazilian register numbers for persons (CPF) and companies (CN
 Now you can install this module with pip! Yeah! :D
 
 ```
-pip install pycpfcnpj
+pip install cpf-cnpj-validate
 ```
 
 ### Quick Start
@@ -106,7 +106,7 @@ Módulo python para validar números de CPF e CNPJ.
 Agora você pode instalar o pycpfcnpj usando o pip!\m/
 
 ```
-pip install pycpfcnpj
+pip install cpf-cnpj-validate
 ```
 
 #### Projetos relacionados
