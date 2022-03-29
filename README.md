@@ -12,8 +12,12 @@ Python module for brazilian register numbers for persons (CPF) and companies (CN
 [![PyPI version](https://badge.fury.io/py/pycpfcnpj.svg)](https://badge.fury.io/py/pycpfcnpj)
 ![Python versions](https://img.shields.io/pypi/pyversions/pycpfcnpj)
 
+
+
 #### Related projects
 - [Pycnpj-crawler](https://github.com/matheuscas/pycnpj-crawler): Python module that crawls data for a given CNPJ on the government website of each state (please check the supported states).
+-  Library forked from [pycpfcnpj](https://github.com/matheuscas/pycpfcnpj)
+- The main purpose of the fork was to add mask for cpf or cnpj from int or string.
 
 
 ### How to install
@@ -76,6 +80,21 @@ Expected output:
 >>> 63.212.638/0361-35
 ```
 
+And you also can format a cpf or cnpj number with valid mask
+
+```python
+from pycpfcnpj import mask
+only_number_cnpj: str = "63212638036135"
+with_mask_cnpj: str = mask.mask_cpf_cnpj(only_number_cnpj)
+only_number_cpf: int = 4889186697
+with_mask_cpf: str = mask.mask_cpf_cnpj(only_number_cpf)
+print(with_mask_cnpj)
+print(with_mask_cpf)
+
+Expected output:
+>>> 63.212.638/0361-35
+>>> 048.891.866-97
+```
 Have fun!
 
 In portuguese:
